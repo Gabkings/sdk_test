@@ -6,20 +6,23 @@ const client: RingsSDK = new RingsSDK({
     apiKey: "ok797nVoYjqA78XKDmLW",
   });
   
-  client.getQoutes().then((p: any) => {
+client.getQoutes().then((p: any) => {
     console.log(p);
-  }); 
+}); 
+
+client.getMovies().then((p: any) => {
+    console.log(p);
+}); 
+
+client.getMovieById("testid").then((p: any) => {
+    console.log(p);
+}); 
+
+client.getMovieQuotes("testid").then((p: any) => {
+    console.log(p);
+}); 
   
-//   client.getQuoteById("5cd96e05de30eff6ebcce84b").then((p: any) => {
-//     console.log(p);
-//   });
+  client.getQuoteById("5cd96e05de30eff6ebcce84b").then((p: any) => {
+    console.log(p);
+  });
   
-//   client
-//     .createPost({
-//       title: "test",
-//       body: "test",
-//       userId: 1,
-//     })
-//     .then((p) => {
-//       console.log(`Created new post with id ${p.id}`);
-//     });
